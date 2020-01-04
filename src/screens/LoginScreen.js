@@ -9,30 +9,37 @@ export default class LoginScreen extends Component {
   render() {
    
     return (
-   <View style={{flex: 1, backgroundColor: "#fcf4d4"}}>
+   <View style={{flex: 1, backgroundColor: "#ffffff"}}>
             <View style={Styles.imageView}>
-                <Image source={require("../assets/img/login_bg.jpg")} style={Styles.lakecropped}/>
+                <Image source={require("../assets/img/login.png")} style={Styles.lakecropped}/>
               
               
             </View>
             <View style={Styles.loginView}>
                <View>
-                   <Image source={require("../assets/img/sun-bath.png")}
-                   style={Styles.loginImg}
+                   <Image source={require("../assets/img/palmyrah.png")}
+                   style={Styles.logoImg}
                    />
                </View>
+               <View>
+                   <Text style={Styles.logoText}>PALMYRAH HOUSE</Text>
+                   <Text style={Styles.logoText1}>TOURIST GUIDE</Text>
+               </View>
+               <View>
+                   <Text style={Styles.login}> Login</Text>
+               </View>
                <View style={Styles.formView}>
-                   <Text style={Styles.labelText}>Username</Text>
+                   <Text style={Styles.labelText}>UserName</Text>
                <TextInput
                     style={Styles.textInput}
-                    placeholder=" Any User Name"
+                    placeholder=" UserName or Email Id"
                     placeholderTextColor="#877570"
 
                 />
                  <Text style={Styles.labelText1}>Password</Text>
                  <TextInput
                     style={Styles.passwordInput}
-                    placeholder=" ***********"
+                    placeholder=" *********************"
                     placeholderTextColor="#877570"
                     
                 />
@@ -43,6 +50,13 @@ export default class LoginScreen extends Component {
                 <TouchableOpacity style={Styles.loginButton} >
                     <Text style={Styles.loginButtonText}>Login</Text>
                 </TouchableOpacity>
+                
+                </View>
+                <View style={Styles.buttonArea1}>
+                <TouchableOpacity style={Styles.loginButton} >
+                    <Text style={Styles.loginButtonText}>Sign Up</Text>
+                </TouchableOpacity>
+                
                 </View>
                
                </View>
@@ -74,13 +88,13 @@ var Styles = StyleSheet.create({
     
     lakecropped: {
         width: "100%",
-        height: "100%",
-        borderBottomLeftRadius: 50,
-        borderBottomRightRadius: 50,
-        opacity: 0.89,
-        backgroundColor: "#fcf4d4",
-        backgroundColor: "yellow",
-        backgroundColor: "#b4816f",
+        height: "260%",
+        borderBottomLeftRadius: 0,
+        borderBottomRightRadius: 0,
+        opacity: 1,
+        backgroundColor: "#ffffff",
+        backgroundColor: "ffffff",
+        backgroundColor: "#ffffff",
         
      },
     
@@ -91,7 +105,7 @@ var Styles = StyleSheet.create({
 
      textInput: {
       height: 40,
-      width: 174,
+      width: 250,
       shadowColor:"rgba(0, 0, 0, 0.16)",
       shadowRadius: 1.1,
       shadowOffset: {
@@ -123,7 +137,7 @@ var Styles = StyleSheet.create({
      
      passwordInput: {
         height: 40,
-        width: 174,
+        width: 250,
         top: 20,
         shadowColor:"rgba(0, 0, 0, 0.16)",
         shadowRadius: 1.1,
@@ -155,9 +169,9 @@ var Styles = StyleSheet.create({
        },
 
        labelText: {
-        color: "#ab7362",
+        color: "#a1020e",
         fontFamily: 'Georgia',
-        fontSize: 14,
+        fontSize: 18,
         fontWeight: "600",
         textShadowColor: "rgba(0, 0, 0, 0.16)",
         textShadowOffset: {
@@ -172,9 +186,9 @@ var Styles = StyleSheet.create({
 
        labelText1: {
            top: 20,
-        color: "#ab7362",
+        color: "#a1020e",
         fontFamily: 'Georgia',
-        fontSize: 14,
+        fontSize: 18,
         fontWeight: "600",
         textShadowColor: "rgba(0, 0, 0, 0.16)",
         textShadowOffset: {
@@ -196,17 +210,19 @@ var Styles = StyleSheet.create({
        },
 
        forgotPasswordText: {
-        color: "#ab7362",
+        color: "#a1020e",
         fontFamily: 'Georgia',
         fontSize: 12,
         fontWeight: "600",
-        textShadowColor: "rgba(0, 0, 0, 0.16)",
-        textShadowOffset: {
-            width:0.5,
-            height:0.5
-        },
+        width:100,
+        // textShadowColor: "rgba(0, 0, 0, 0.16)",
+        // textShadowOffset: {
+        //     width:0.5,
+        //     height:0.5
+        // },
         textShadowRadius:2,
-        alignSelf: "flex-end",
+        left: -150,
+       // alignSelf: "flex-end",
         textDecorationLine: "underline"
 
        },
@@ -214,14 +230,24 @@ var Styles = StyleSheet.create({
        buttonArea: {
         top: 45,
         width: 120,
-        alignSelf: "center",
+        //left: -35,
+      //  alignSelf: "center",
+       
+       },
+       buttonArea1: {
+        top: 5,
+        width: 120,
+        left: 130,
+      //  alignSelf: "center",
        
        },
 
        loginButton: {
             width: 120,
             height: 40,
-            backgroundColor: "#b4816f",
+            backgroundColor: "#a6020e",
+          
+  
             borderRadius: 20,
             elevation: 4
        },
@@ -285,11 +311,57 @@ var Styles = StyleSheet.create({
 
      //sub views
      formView: {
-         top: 35,
+         top: -150,
+         left: -35,
          alignSelf: "center",
      },
-    
-  
+     logoText: {
+        color: "#63030b",
+        fontSize: 24,
+        fontWeight: "100",
+        letterSpacing: 2.5,
+        //textShadowRadius: 1000,
+        top: -230,
+        left:150,
+       // textShadowColor:"#484e35",
+        textShadowOffset:{
+            width: 10,
+            height:20
+        },
+        fontFamily: "Georgia",
+     
+        
+     },
+     logoText1: {
+        color: "#63030b",
+        fontSize: 18,
+        fontWeight: "100",
+        letterSpacing: 2.5,
+        //textShadowRadius: 1000,
+        top: -230,
+        left:190,
+       // textShadowColor:"#484e35",
+        textShadowOffset:{
+            width: 10,
+            height:20
+        },
+        fontFamily: "Georgia",
+    },
+    login: {
+        color: "black",
+        fontSize: 40,
+        fontWeight: "100",
+        letterSpacing: 2.5,
+        //textShadowRadius: 1000,
+        top: -210,
+        left:30,
+       // textShadowColor:"#484e35",
+        textShadowOffset:{
+            width: 10,
+            height:20
+        },
+        fontFamily: "Georgia",
+    },
 
     //  main views
     imageView: {
@@ -297,7 +369,14 @@ var Styles = StyleSheet.create({
     },
     loginView: {
         flex: 3
-    }
+    },
+    logoImg: {
+        position: "absolute",
+        top: -240,
+        left: 10,
+        width: 130,
+        height:70
+    },
 
 
 
@@ -305,16 +384,3 @@ var Styles = StyleSheet.create({
   });
 
 
-// const styles = StyleSheet.create({
-//     container: {
-//         margin: 0,
-//         padding: 0,
-//     },
-//     lakecropped: {
-//         width: "360px",
-//         height: "263px",
-//         objectFit: "contain",
-//         opacity: 0.8,
-//         boxShadow:"5px 10px 6px 0 rgba(0, 0, 0, 0.16)",
-//       }
-// })
