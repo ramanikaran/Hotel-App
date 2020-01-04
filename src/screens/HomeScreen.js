@@ -1,5 +1,5 @@
 import { View,Text, StyleSheet, Image, Dimensions, TouchableOpacity } from 'react-native';
-import ButtonHome from "../components/Button";
+
 
 
 import React, { Component } from 'react';
@@ -23,26 +23,32 @@ export default class HomeScreen extends Component {
                 <View style={Styles.loginBtnView}>
                   <TouchableOpacity style={Styles.loginTouch}>
                      <Image source={require("../assets/img/b1.png")} style={Styles.B1}/>
+                     <Text style={Styles.mapText}>MAP</Text>
                   </TouchableOpacity>
                 </View>
                 <View style={Styles.registerBtnView}>
                   <TouchableOpacity style={Styles.registerTouch}>
                      <Image source={require("../assets/img/b2.png")} style={Styles.B2}/>
+                     <Text style={Styles.resortText}>RESORT</Text>
                   </TouchableOpacity>
                 </View>
                 <View style={Styles.resortBtnView}>
                   <TouchableOpacity style={Styles.resortTouch}>
                      <Image source={require("../assets/img/b3.png")} style={Styles.B3}/>
+                     <Text style={Styles.kiteText}>KITE SURFING</Text>
                   </TouchableOpacity>
                 </View>
                 <View style={Styles.kiteSurfingBtnView}>
                   <TouchableOpacity style={Styles.kiteSurfingTouch}>
                      <Image source={require("../assets/img/b4.png")} style={Styles.B4}/>
+                     <Text style={Styles.signinText}>SIGNIN</Text>
                   </TouchableOpacity>
                 </View>
                 <View style={Styles.kiteSurfingBtnView}>
                   <TouchableOpacity style={Styles.LoginTouch}>
                      <Image source={require("../assets/img/b5.png")} style={Styles.B5}/>
+                     <Text style={Styles.registerText}>REGISTER</Text>
+                     
                   </TouchableOpacity>
                 </View>
                
@@ -236,6 +242,56 @@ var Styles = StyleSheet.create({
        
        
      },
+     mapText: {
+      color: "black",
+      fontSize: 15,
+      fontWeight: "100",
+      letterSpacing: 1,
+      top: -34,
+      left:90,
+      fontFamily: "Cochin", 
+            fontWeight: 'bold', 
+      },
+      resortText: {
+         color: "black",
+         fontSize: 15,
+         fontWeight: "100",
+         letterSpacing: 1,
+         top: -32,
+         left:100,
+         fontFamily: "Cochin", 
+            fontWeight: 'bold', 
+         },
+         kiteText: {
+            color: "black",
+            fontSize: 13,
+            fontWeight: "100",
+            letterSpacing: 1,
+            top: -30,
+            left:85,
+            fontFamily: "Cochin", 
+            fontWeight: 'bold',
+            },
+            signinText: {
+               color: "black",
+               fontSize: 15,
+               fontWeight: "100",
+               letterSpacing: 1,
+               top: -32,
+               left:105,
+               fontFamily: "Cochin", 
+               fontWeight: 'bold',
+               },
+               registerText: {
+                  color: "black",
+                  fontSize: 15,
+                  fontWeight: "100",
+                  letterSpacing: 1,
+                  top: -32,
+                  left:90,
+                  fontFamily: "Cochin", 
+                  fontWeight: 'bold',
+                  },
 
      footerView: {
         width: "100%",
